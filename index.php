@@ -5,8 +5,8 @@
 	$reforma = new Orcamento(500);
 	$calculadora = new Calculadora;
 
-	echo $calculadora->calculaICMS($reforma);
+	echo $calculadora->calcula($reforma, "ICMS");
 
 	echo "<br>";
 
-	echo $calculadora->calculaISS($reforma);
+	echo $calculadora->calcula($reforma, "ISS");
