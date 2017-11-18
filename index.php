@@ -6,3 +6,7 @@
 	$calculadora = new Calculadora;
 
 	echo $calculadora->calculaICMS($reforma);
+
+	echo "<br>";
+
+	echo $calculadora->calculaISS($reforma);
