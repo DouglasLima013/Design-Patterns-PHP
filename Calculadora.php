@@ -1,7 +1,7 @@
 <?php
 	class Calculadora
 	{
-		function calcula(orcamento $orcamento, $imposto)
+		function calcula(orcamento $orcamento, Imposto $imposto)
 		{
 			return $imposto->calcula($orcamento);
 		}

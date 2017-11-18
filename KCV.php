@@ -1,5 +1,5 @@
 <?php
-	class KCV
+	class KCV implements Imposto
 	{
 		public function calcula(orcamento $orcamento)
 		{
