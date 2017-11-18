@@ -1,15 +1,20 @@
 <?php
+	require 'ICMS.php';
+	require 'ISS.php';
+
 	class Calculadora
 	{
 		function calcula(orcamento $orcamento, $imposto)
 		{
 			if ($imposto == "ICMS")
 			{
-				return $orcamento->getValor() * 0.05;
+				$icms = new ICMS;
+				return $icms->calcula($orcamento);
 			}
 			elseif ($imposto == "ISS")
 			{
-				return $orcamento->getValor() * 0.1;
+				$iss = new ISS;
+				return $iss->calcula($orcamento);
 			}
 		}
 	}
