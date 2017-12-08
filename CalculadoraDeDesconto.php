@@ -1,19 +1,20 @@
 <?php
+	require 'Desconto500Reais.php';
+	require 'Desconto5Itens.php';
+
 	class CalculadoraDeDesconto
 	{
 		public function desconto(orcamento $orcamento)
 		{
-			if (count($orcamento->getItens()) > 5)
+			$desconto = new Desconto500Reais();
+			$valorDoDesconto = $desconto->desconto($orcamento);
+
+			if ($valorDoDesconto == 0)
 			{
-				return $orcamento->getValor() * 0.1;
+				$desconto = new Desconto5Itens;
+				$valorDoDesconto = $desconto->desconto($orcamento);
 			}
-			elseif ($orcamento->getValor() >= 500)
-			{
-				return $orcamento->getValor() * 0.05;
-			}
-			else
-			{
-				return 0;
-			}
+
+			return $valorDoDesconto;
 		}
 	}
