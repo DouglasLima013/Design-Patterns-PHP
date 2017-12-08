@@ -1,15 +1,22 @@
 <?php
-	class Desconto500Reais
+	class Desconto500Reais implements Desconto
 	{
+		private $proximoDesconto;
+
 		public function desconto(orcamento $orcamento)
 		{
-			if ($orcamento->getValor() >= 500)
+			if ($orcamento->getValor() > 500)
 			{
 				return $orcamento->getValor() * 0.05;
 			}
 			else
 			{
-				return 0;
+				$this->proximoDesconto->desconto($orcamento);
 			}
+		}
+
+		public function setProximo(Desconto $proximo)
+		{
+			$this->proximoDesconto = $proximo;
 		}
 	}
