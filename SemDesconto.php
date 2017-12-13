@@ -3,11 +3,11 @@
 	{
 		public function desconto(orcamento $orcamento)
 		{
-			echo "sem desconto";
+			return 0;
 		}
 
 		public function setProximo(Desconto $proximo)
 		{
-			//NULL
+			//faz nada
 		}
 	}

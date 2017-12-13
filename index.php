@@ -12,7 +12,7 @@
 	require 'ISS.php';
 	require 'KCV.php';
 
-	$reforma = new Orcamento(500);
+	$reforma = new Orcamento(600);
 	$calculadora = new Calculadora;
 
 	echo $calculadora->calcula($reforma, new ICMS);
@@ -27,12 +27,11 @@
 	//Descontos
 
 	$CalculadoraDeDescontos = new CalculadoraDeDesconto;
-	$reforma->addItem(new Item("tijolo", 250));
-	$reforma->addItem(new Item("tijolo", 250));
-	$reforma->addItem(new Item("tijolo", 250));
-	$reforma->addItem(new Item("tijolo", 250));
-	$reforma->addItem(new Item("tijolo", 250));
-	$reforma->addItem(new Item("tijolo", 250));
+	$reforma->addItem(new Item("tijolo", 100));
+	$reforma->addItem(new Item("tijolo", 100));
+	$reforma->addItem(new Item("tijolo", 100));
+	$reforma->addItem(new Item("tijolo", 100));
+	$reforma->addItem(new Item("tijolo", 100));
 
 	echo "Desconto";
 	echo "<br>";

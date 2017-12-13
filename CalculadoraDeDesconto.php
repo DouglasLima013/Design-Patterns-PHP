@@ -7,9 +7,9 @@
 	{
 		public function desconto(orcamento $orcamento)
 		{
-			$Desconto500Reais = new Desconto500Reais();
-			$Desconto5Itens = new Desconto5Itens();
-			$SemDesconto = new SemDesconto();
+			$Desconto500Reais = new Desconto500Reais;
+			$Desconto5Itens = new Desconto5Itens;
+			$SemDesconto = new SemDesconto;
 
 			$Desconto500Reais->setProximo($Desconto5Itens);
 			$Desconto5Itens->setProximo($SemDesconto);

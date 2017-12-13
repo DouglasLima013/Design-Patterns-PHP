@@ -11,7 +11,7 @@
 			}
 			else
 			{
-				$this->proximoDesconto->desconto($orcamento);
+				return $this->proximoDesconto->desconto($orcamento);
 			}
 		}
 
