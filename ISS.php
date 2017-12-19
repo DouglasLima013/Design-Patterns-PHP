@@ -1,6 +1,10 @@
 <?php
 	class ISS extends TemplateDeImpostos
 	{
+		function __construct($imposto = null)
+		{
+			parent::__construct($imposto);
+		}
 
 		function deveUsarOMaximo(orcamento $orcamento)
 		{

@@ -1,5 +1,19 @@
 <?php
-	interface Imposto
+	abstract class Imposto
 	{
-		public function calcula(orcamento $orcamento);
+		protected $outroImposto;
+
+		function __construct($imposto = null)
+		{
+			$this->outroImposto = $imposto;
+		}
+
+		public abstract function calcula(orcamento $orcamento);
+
+		public function calculaOutroImposto(orcamento $orcamento)
+		{
+			if (is_null($this->outroImposto)) return 0;
+
+			return $this->outroImposto->calcula($orcamento);
+		}
 	}

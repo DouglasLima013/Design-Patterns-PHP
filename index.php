@@ -5,10 +5,10 @@
 	require 'Desconto5Itens.php';
 	require 'SemDesconto.php';
 	require 'Item.php';
-	require 'Imposto.php';
-	require 'templateDeImpostos.php';
 	require 'Calculadora.php';
 	require 'CalculadoraDeDesconto.php';
+	require 'Imposto.php';
+	require 'templateDeImpostos.php';
 	require 'ICMS.php';
 	require 'ISS.php';
 	require 'KCV.php';
@@ -16,13 +16,13 @@
 	$reforma = new Orcamento(400);
 	$calculadora = new Calculadora;
 
-	echo $calculadora->calcula($reforma, new ICMS);
+	echo $calculadora->calcula($reforma, new ICMS());
 	echo "<br>";
 
-	echo $calculadora->calcula($reforma, new ISS);
+	echo $calculadora->calcula($reforma, new ISS());
 	echo "<br>";
 
-	echo $calculadora->calcula($reforma, new KCV);
+	echo $calculadora->calcula($reforma, new KCV(new ICMS()));
 	echo "<br>";
 
 	//Descontos
