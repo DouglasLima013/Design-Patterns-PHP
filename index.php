@@ -9,6 +9,7 @@
 	require 'CalculadoraDeDesconto.php';
 	require 'Imposto.php';
 	require 'templateDeImpostos.php';
+	require 'EstadoDeUmOrcamento.php';
 	require 'ICMS.php';
 	require 'ISS.php';
 	require 'KCV.php';
@@ -22,6 +23,12 @@
 	echo $reforma->getValor() . "<br>";
 	$reforma->aplicarDesconto();
 	echo $reforma->getValor() . "<br>";
+
+	$reforma->Aprova();
+	$reforma->aplicarDesconto();
+	echo $reforma->getValor() . "<br>";
+
+	$reforma->Reprova();
 
 	$calculadora = new Calculadora;
 

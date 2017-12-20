@@ -37,7 +37,7 @@
 			return $this->estado;
 		}
 
-		public function setEstado($novoEstado)
+		public function setEstado(EstadoDeUmOrcamneto $novoEstado)
 		{
 			$this->estado = $novoEstado;
 		}
@@ -45,5 +45,20 @@
 		public function aplicarDesconto()
 		{
 			$this->estado->aplica($this);
+		}
+
+		public function Aprova()
+		{
+			$this->estado->Aprova($this);
+		}
+
+		public function Reprova()
+		{
+			$this->estado->Reprova($this);
+		}
+
+		public function Finaliza()
+		{
+			$this->estado->Finaliza($this);
 		}
 	}
