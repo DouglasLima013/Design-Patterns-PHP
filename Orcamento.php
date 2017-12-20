@@ -3,11 +3,13 @@
 	{
 		private $valor;
 		private $itens;
+		private $estado;
 
 		function __construct($novoValor)
 		{
 			$this->valor = $novoValor;
 			$this->itens = array();
+			$this->estado = new EmAprovacao();
 		}
 
 		public function addItem(Item $novoItem)
@@ -23,5 +25,25 @@
 		public function getValor()
 		{
 			return $this->valor;
+		}
+
+		public function setValor($novoValor)
+		{
+			$this->valor = $novoValor;
+		}
+
+		public function getEstado()
+		{
+			return $this->estado;
+		}
+
+		public function setEstado($novoEstado)
+		{
+			$this->estado = $novoEstado;
+		}
+
+		public function aplicarDesconto()
+		{
+			$this->estado->aplica($this);
 		}
 	}

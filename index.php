@@ -12,8 +12,17 @@
 	require 'ICMS.php';
 	require 'ISS.php';
 	require 'KCV.php';
+	require 'EmAprovacao.php';
+	require 'Aprovado.php';
+	require 'Reprovado.php';
+	require 'Finalizado.php';
 
-	$reforma = new Orcamento(400);
+	$reforma = new Orcamento(490);
+
+	echo $reforma->getValor() . "<br>";
+	$reforma->aplicarDesconto();
+	echo $reforma->getValor() . "<br>";
+
 	$calculadora = new Calculadora;
 
 	echo $calculadora->calcula($reforma, new ICMS());
