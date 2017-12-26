@@ -4,7 +4,7 @@
 		private $nome;
 		private $valor;
 
-		function __Item($novoNome, $novoValor)
+		function __construct($novoNome, $novoValor)
 		{
 			$this->nome = $novoNome;
 			$this->valor = $novoValor;
