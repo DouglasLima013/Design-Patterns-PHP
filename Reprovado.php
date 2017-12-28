@@ -1,5 +1,5 @@
 <?php
-	class Reprovado implements EstadoDeUmOrcamneto
+	class Reprovado implements EstadoDeUmOrcamento
 	{
 		public function aplica(orcamento $orcamento)
 		{

@@ -37,7 +37,7 @@
 			return $this->estado;
 		}
 
-		public function setEstado(EstadoDeUmOrcamneto $novoEstado)
+		public function setEstado(EstadoDeUmOrcamento $novoEstado)
 		{
 			$this->estado = $novoEstado;
 		}

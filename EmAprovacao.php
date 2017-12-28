@@ -1,5 +1,5 @@
 <?php
-	class EmAprovacao implements EstadoDeUmOrcamneto
+	class EmAprovacao implements EstadoDeUmOrcamento
 	{
 		public function aplica(orcamento $orcamento)
 		{

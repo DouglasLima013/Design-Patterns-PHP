@@ -1,5 +1,5 @@
 <?php
-	interface EstadoDeUmOrcamneto
+	interface EstadoDeUmOrcamento
 	{
 		public function aplica(orcamento $orcamento);
 

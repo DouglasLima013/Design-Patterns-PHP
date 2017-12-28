@@ -1,5 +1,5 @@
 <?php
-	class finalizado implements EstadoDeUmOrcamneto
+	class finalizado implements EstadoDeUmOrcamento
 	{
 		public function aplica(orcamento $orcamento)
 		{
